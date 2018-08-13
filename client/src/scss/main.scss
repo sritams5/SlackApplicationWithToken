@@ -1,0 +1,484 @@
+@import '~bootstrap/scss/bootstrap';
+@import '~jquery-ui/themes/base/autocomplete';
+@import '~emojionearea/dist/emojionearea.css';
+
+html
+{
+    height:100%;
+}
+
+body
+{
+   min-height:100%;
+   background-color:#F4F9FA;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+#chatLists{
+    background-color: #343a40 ;
+   box-sizing: border-box;
+   width: 100%;
+   height: 100%;
+}
+
+#chatLists, #chatArea{
+   height: 100%;
+   padding: 0;
+   width: 100%;
+   overflow: auto;
+}
+
+
+#chatArea{
+   padding: 0 5px 0 5px;
+}
+
+
+#messageBody{
+    margin: 0;
+    padding: 0;
+    height: 94%;
+    overflow-y: scroll;
+}
+
+#currentTeam {
+    color: #fff;
+    border-top: 1px solid #000;
+    padding: 10px;
+
+    span {
+        color: #0d73f1;
+    }
+}
+
+//.container-fluid{
+//   padding: 0;
+//   text-align: center;
+//}
+
+.containerWrapper {
+   width: 100%;
+   text-align: center;
+   padding: 0;
+   height: 90vh;
+   overflow: auto;
+}
+
+#enter{
+   font-size: 0.8rem;
+}
+
+
+#container-root
+{
+    padding:0px;
+    margin:0px;
+    height:100%;
+}
+
+.home-section
+{
+    padding: 64px 0px;
+}
+
+.home-section-inner
+{
+    margin: 0px 70px;
+}
+
+.home-section-header
+{
+    font-size: 4.8rem;
+}
+
+.dashboard
+{
+    background-color:#F4F9FA;
+}
+
+.team-link
+{
+    width: 88%;
+    border: 1px solid #B5B8B9;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    font-size: 2em;
+}
+
+.team-link:hover
+{
+    background-color:#D7DADA;
+    text-decoration: none;
+}
+
+.form-container
+{
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+    margin: 1rem -15px 0;
+    border: 1px solid #E4E7E7;
+    border-radius: 4px;
+}
+
+#create-team-form .form-group
+{
+    text-align:left;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 80%;
+    color: white;
+    text-align: center;
+ }
+
+.search{
+    width: 20rem;
+    font-weight: 200;
+    border: 1px solid #919193;
+}
+
+#contentHolder{
+    border-radius: 0.7rem;
+}
+
+#content, #channelContent {
+    max-height: 360px;
+    overflow: auto;
+}
+
+#searchItem{
+    border-color: white;
+}
+
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+}
+
+#footerContent{
+    font-size: 11.84px;
+    color: rgb(102, 100, 100);
+}
+
+#searchFooter{
+    background-color: #f9f9f9;
+}
+
+.modal-content{
+    border-radius: 0.8rem;
+}
+
+.modal-footer{
+    border-radius: 0.8rem;
+    border-top:none;
+}
+
+#searchResult {
+    ul {
+        position: static !important;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #ccc;
+
+        li {
+            list-style: none;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+
+            &:hover {
+                background: #666;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+ .panBackground {
+    background: rgb(255, 255, 255);
+}
+
+.panComponents {
+    margin: 30px 70px 30px 70px;
+}
+
+
+.commandComment {
+    width: 500px;
+    height: 50px;
+}
+
+
+.playGroungDiv-bot{
+    background: rgb(223, 223, 223);
+    padding: 10px;
+    margin: 2px;
+    text-align: right;
+    border-radius: 10px;
+}
+.playGroungDiv-you{
+    background: rgb(223, 223, 223);
+    padding: 10px;
+    margin: 2px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.playGroungDiv-bot:hover{
+    background: rgb(175, 175, 175);
+}
+
+.playGroungDiv-you:hover{
+    background: rgb(175, 175, 175);
+}
+
+#todolistModalBody .fa {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.reminderRow {
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        padding: 0 16px;
+    }
+}
+ legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+$padding-base: 15px;
+$color-body: #fff;
+$color-border: #ddd;
+$color-link: #0275d8;
+$border-radius: .25rem;
+
+.nav-tabs {
+	&--vertical {
+		border-bottom: none;
+		border-right: 1px solid $color-border;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	&--left {
+		margin: 0 $padding-base;
+
+		.nav-item + .nav-item {
+			margin-top: .25rem;
+		}
+
+		.nav-link {
+			transition: border-color .125s ease-in;
+			white-space: nowrap;
+
+			&:hover {
+				background-color: lighten($color-border, 10%);
+				border-color: transparent;
+			}
+		}
+
+		.nav-link.active {
+			border-bottom-color: $color-border;
+			border-right-color: $color-body;
+			border-bottom-left-radius: $border-radius;
+			border-top-right-radius: 0;
+			margin-right: -1px;
+
+			&:hover {
+				background-color: $color-body;
+				border-color: $color-link $color-body $color-link $color-link;
+			}
+		}
+	}
+}
+
+#myModal .modal-dialog {
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+    margin: 0 auto;
+}
+
+.emojionearea .emojionearea-editor {
+    min-height: 36px;
+    max-height: 36px;
+    padding-top: 8px;
+}
+
+.show-login, #searchContainer, #notificationFilter, #notificationCounter {
+    display: none;
+}
+
+.side-list {
+    margin: 0;
+    padding: 0;
+
+    li {
+        padding: 5px 10px;
+        list-style: none;
+        color: #fff;
+        cursor: pointer;
+
+        &.active {
+            background: #afafaf;
+        }
+
+        &:first-child {
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+            border-top: 1px solid #000;
+        }
+
+        span {
+            float: right;
+
+            .fa {
+                font-size: 16px;
+                padding-left: 5px;
+                color: #666;
+                cursor: pointer;
+
+                &:hover {
+                    color: #999;
+                }
+            }
+        }
+    }
+    &.side-list-body {
+        li {
+            &:first-child {
+            font-weight: normal;
+            border-width: 0;
+            }
+        }
+    }
+}
+
+//for file upload cursor to change
+#addMedia:hover {
+    cursor: pointer;
+ }
+
+ .contactUser:hover {
+    cursor: pointer;
+ }
+
+
+// #channelContent, #userContent {
+    .nav {
+        border: 1px solid #ccc;
+
+        .nav-link {
+            border-radius: 0 !important;
+        }
+
+        li {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+
+            &:last-child {
+                border-bottom-width: 0;
+            }
+
+            a {
+                padding: 5px;
+                display: block;
+                background: #f2f2f2;
+                border-radius: 0;s
+                &:hover {
+                    background: #ccc;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+// }
+
+
+ //for adusting position under creation channel modal
+ #usersinTeam , #addMem {
+    margin-left: 7%;
+}
+
+ .emojionearea .emojionearea-picker.emojionearea-picker-position-top {
+     right: 0 !important;
+ }
+///////////////////////INVITATION LOADER/////////////////
+.animationload {
+    background-color: #fff;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+.osahanloading {
+    animation: 1.5s linear 0s normal none infinite running osahanloading;
+    background: #fed37f none repeat scroll 0 0;
+    border-radius: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+}
+.osahanloading::after {
+    animation: 1.5s linear 0s normal none infinite running osahanloading_after;
+    border-color: #85d6de transparent;
+    border-radius: 80px;
+    border-style: solid;
+    border-width: 10px;
+    content: "";
+    height: 80px;
+    left: -15px;
+    position: absolute;
+    top: -15px;
+    width: 80px;
+}
+@keyframes osahanloading {
+0% {
+    transform: rotate(0deg);
+}
+50% {
+    background: #85d6de none repeat scroll 0 0;
+    transform: rotate(180deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
